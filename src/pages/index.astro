@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomeDiscover from '@components/HomeDiscover.astro';
+import HomeWelcome from '@components/HomeWelcome.astro';
+import HomeHero from '@components/HomeHero.astro';
+import HomeLogos from '@components/HomeLogos.astro';
+import HomeMessaging from '@components/HomeMessaging.astro';
+---
+
+<Layout>
+	<main>
+		<HomeHero />
+		<HomeLogos />
+		<HomeDiscover />
+		<HomeWelcome />
+		<HomeMessaging />
+	</main>
+	<script is:inline>
+		document.addEventListener("DOMContentLoaded", () => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					// Añade clases para activar la animación
+					entry.target.classList.remove("opacity-0");
+					entry.target.classList.remove("translate-y-20");
+					//entry.target.classList.remove("scale-95");
+					
+					// Opcional: Dejar de observar después de animar
+					observer.unobserve(entry.target);
+				}
+			});
+			},
+			{ threshold: 0.2 } // Activa cuando el 20% del elemento es visible
+		);
+
+		// Observa todos los elementos con la clase "scroll-animate"
+		document.querySelectorAll(".scroll-animate").forEach((el) => observer.observe(el));
+		});
+	</script>
+</Layout>

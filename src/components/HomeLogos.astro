@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import atsys from '@images/customers/iala-customer-atsys.webp';
+import cocacola from '@images/customers/iala-customer-cocacola.webp';
+import dominos from '@images/customers/iala-customer-dominos-pizza.webp';
+import tallowBalm from '@images/customers/iala-customer-tallow-balm.webp';
+import crumbl from '@images/customers/iala-customer-crumbl.webp';
+---
+<section class="p-20 text-black bg-white">
+    <h2 class="text-3xl text-center opacity-0 transition-all duration-700 ease-out scroll-animate translate-y-20 delay-100">Marcas que creen en nosotros</h2>
+    <div class="mt-3">
+        <ul class="flex ">
+            <li class="opacity-0 transition-all duration-700 ease-out scroll-animate translate-y-20 delay-300">
+                <Image src={cocacola} width={300} height={300} alt="Coca-Cola logo" />
+            </li>
+            <li class="opacity-0 transition-all duration-700 ease-out scroll-animate translate-y-20 delay-500">
+                <Image src={tallowBalm} width={300} height={300} alt="Tallow Balm logo" />
+            </li>
+            <li class="opacity-0 transition-all duration-700 ease-out scroll-animate translate-y-20 delay-700">
+                <Image src={dominos} width={300} height={300} alt="Domino's Pizza logo" />
+            </li>
+            <li class="opacity-0 transition-all duration-700 ease-out scroll-animate translate-y-20 delay-900">
+                <Image src={atsys} width={300} height={300} alt="Atsys logo" />
+            </li>
+            <li class="opacity-0 transition-all duration-700 ease-out scroll-animate translate-y-20 delay-1100">
+                <Image src={crumbl} width={300} height={300} alt="Crumbl logo" />
+            </li>
+        </ul>
+    </div>
+</section>

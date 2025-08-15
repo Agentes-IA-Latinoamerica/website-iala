@@ -1,0 +1,26 @@
+---
+import logo from '@images/iala-logo.webp';
+import Image from 'astro/components/Image.astro';
+import { Icon } from 'astro-icon/components';
+---
+<header class="fixed top-0 z-50 w-screen">
+    <div class="flex justify-between items-center text-white px-6 py-4">
+        <div>
+            <Image src={logo} alt="IALA Logo" width="60" height="60" />
+        </div>
+        <div>
+            <nav class="text-white backdrop-blur-xl py-5 px-20 rounded-full bg-[#00519966]">
+                <ul class="flex justify-center items-center gap-6 navigation">
+                    <li><a href="/about" class="desktop-link-header text-white uppercase hover:text-gray text-shadow-lg">Nosotros</a></li>
+                    <li><a href="/blog" class="desktop-link-header text-white uppercase hover:text-gray text-shadow-lg">Blog</a></li>
+                    <li><a href="/contact" class="desktop-link-header text-white uppercase hover:text-gray text-shadow-lg">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <span>
+                <Icon name="line-md:chat" class="text-white text-2xl" />
+            </span>
+        </div>
+    </div>
+</header>
